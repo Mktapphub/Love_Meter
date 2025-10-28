@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 // Love emojis for floating animation
 const loveEmojis = ['❤️', '❤️', '❤️', '❤️', '❤️', '❤️', '❤️', '❤️', '❤️', '♥️'];
 
@@ -128,4 +129,5 @@ name1Input.addEventListener('keypress', (e) => {
 
 name2Input.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') calculateLove();
+});
 });
