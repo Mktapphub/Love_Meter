@@ -72,3 +72,6 @@ This project simulates a love compatibility test and plays a romantic sound whil
        ┌──────────┐
        │   End    │
        └──────────┘
+
+
+Netlify Link : https://love-meter2025.netlify.app/
