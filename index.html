@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Meter - Discover the magic between two hearts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="love-meter-container">
+        <!-- Floating Hearts Background -->
+        <div class="floating-hearts-container" id="floatingHearts"></div>
+
+        <div class="love-meter-content">
+            <div class="header-section">
+                <div class="logo-container">
+                    <svg class="logo-heart" width="48" height="48" viewBox="0 0 24 24" fill="#ff4d6d" stroke="#ff4d6d" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </div>
+                <h1 class="main-title">Love Meter</h1>
+                <p class="subtitle">Discover the magic between two hearts</p>
+            </div>
+
+            <div class="calculator-card">
+                <!-- Input Section -->
+                <div class="input-section" id="inputSection">
+                    <div class="input-group">
+                        <label class="input-label">Your Name</label>
+                        <input type="text" id="name1" placeholder="Enter your name" class="love-input">
+                    </div>
+
+                    <div class="heart-divider">
+                        <svg class="divider-heart" width="24" height="24" viewBox="0 0 24 24" fill="#ff758f" stroke="#ff758f" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Partner's Name</label>
+                        <input type="text" id="name2" placeholder="Enter partner's name" class="love-input">
+                    </div>
+
+                    <button id="calculateBtn" class="calculate-button">
+                        <svg class="button-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        Calculate Love
+                    </button>
+                </div>
+
+                <!-- Result Section -->
+                <div class="result-section" id="resultSection" style="display: none;">
+                    <div class="result-heart-container">
+                        <div class="pulsing-heart">
+                            <svg width="120" height="120" viewBox="0 0 24 24" fill="#ff4d6d" stroke="#ff4d6d" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </div>
+                        <div class="percentage-overlay">
+                            <span class="percentage-number" id="percentageNumber">0</span>
+                            <span class="percentage-symbol">%</span>
+                        </div>
+                    </div>
+
+                    <h2 class="names-display" id="namesDisplay"></h2>
+                    <p class="result-message" id="resultMessage"></p>
+
+                    <button id="resetBtn" class="reset-button">
+                        <svg class="button-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                        Try Again
+                    </button>
+                </div>
+            </div>
+
+            <footer class="love-footer">
+                Made with ❤️ by Minhajul
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

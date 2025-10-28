@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.love-meter-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ffe6eb 0%, #fff 50%, #ffd6e7 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Floating Hearts Animation */
+.floating-hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  top: -50px;
+  font-size: 2rem;
+  opacity: 0;
+  animation: floatDown linear forwards;
+}
+
+@keyframes floatDown {
+  0% {
+    top: -50px;
+    opacity: 0;
+    transform: translateX(0) rotate(0deg) scale(0.5);
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(20px) rotate(180deg) scale(1);
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 110vh;
+    opacity: 0;
+    transform: translateX(-20px) rotate(360deg) scale(0.5);
+  }
+}
+
+/* Main Content */
+.love-meter-content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logo-heart {
+  animation: heartBeat 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(255, 77, 109, 0.3));
+}
+
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(1.1);
+  }
+  20%, 40% {
+    transform: scale(0.95);
+  }
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff4d6d 0%, #ff758f 50%, #ff4d6d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #ff4d6d;
+  opacity: 0.8;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Calculator Card */
+.calculator-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 32px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 60px rgba(255, 77, 109, 0.15),
+              0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  border: 2px solid rgba(255, 117, 143, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 70px rgba(255, 77, 109, 0.2),
+              0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ff4d6d;
+  margin-left: 0.5rem;
+}
+
+.love-input {
+  height: 56px;
+  font-size: 1.05rem;
+  border: 2px solid #ffd6e7;
+  border-radius: 16px;
+  padding: 0 1.25rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+}
+
+.love-input:focus {
+  border-color: #ff758f;
+  box-shadow: 0 0 0 4px rgba(255, 77, 109, 0.1);
+  transform: translateY(-2px);
+}
+
+.love-input::placeholder {
+  color: #ffb3c6;
+}
+
+/* Heart Divider */
+.heart-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.divider-heart {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Calculate Button */
+.calculate-button {
+  height: 60px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff4d6d 0%, #ff758f 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  margin-top: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px rgba(255, 77, 109, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.calculate-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(255, 77, 109, 0.4);
+}
+
+.calculate-button:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.calculate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button-icon {
+  transition: transform 0.3s ease;
+}
+
+.calculate-button:hover:not(:disabled) .button-icon:not(.spinning) {
+  transform: scale(1.2);
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Result Section */
+.result-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  animation: fadeInScale 0.6s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.result-heart-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -15px;
+}
+
+.pulsing-heart {
+  animation: heartPulse 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 8px 24px rgba(255, 77, 109, 0.4));
+}
+
+@keyframes heartPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.percentage-overlay {
+  position: absolute;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.1rem;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.percentage-number {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  line-height: 1;
+}
+
+.percentage-symbol {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  line-height: 1;
+}
+
+.names-display {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #ff4d6d;
+  margin: 0;
+  text-align: center;
+}
+
+.result-message {
+  font-size: 1.1rem;
+  color: #ff758f;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Reset Button */
+.reset-button {
+  height: 52px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  background: white;
+  color: #ff4d6d;
+  border: 2px solid #ff4d6d;
+  border-radius: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background: #ff4d6d;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+.love-footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #ff758f;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .love-meter-container {
+    padding: 1rem;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .calculator-card {
+    padding: 2rem 1.5rem;
+    border-radius: 24px;
+  }
+
+  .floating-heart {
+    font-size: 1.5rem;
+  }
+
+  .pulsing-heart svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .percentage-number {
+    font-size: 2.5rem;
+  }
+
+  .percentage-symbol {
+    font-size: 1.75rem;
+  }
+
+  .names-display {
+    font-size: 1.5rem;
+  }
+
+  .result-message {
+    font-size: 1rem;
+  }
+}
