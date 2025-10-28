@@ -1,7 +1,7 @@
 # 💖 Love Meter Web App
 
 A fun and interactive **Love Meter** built using **HTML**, **CSS**, and **JavaScript**.  
-This project simulates a love compatibility test and plays a romantic sound while showing the result — inspired by [Prokerala Love Meter](https://www.prokerala.com/entertainment/love-meter/).
+This project simulates a love compatibility test and plays a romantic sound while showing the result — inspired by Me
 
 ---
 
