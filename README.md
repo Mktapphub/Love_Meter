@@ -21,3 +21,54 @@ This project simulates a love compatibility test and plays a romantic sound whil
 - **CSS3**
 - **JavaScript (Vanilla JS)**
 - **Audio API (for playing sounds)**
+
+# flow-chart :
+
+---
+
+       ┌──────────┐
+       │  Start   │
+       └────┬─────┘
+            │
+     ┌──────▼──────┐
+     │ Input Names │
+     └──────┬──────┘
+            │
+     ┌──────▼──────┐
+     │ Names Empty?│
+     └──────┬──────┘
+        Yes │ No
+            │
+     ┌──────▼──────┐
+     │ Special Couple? │
+     └──────┬──────┘
+        Yes │ No
+            │
+     ┌──────▼──────┐
+     │ lovePercent=100 │
+     └──────┬──────┘
+            │
+            ▼
+     ┌─────────────┐
+     │ Combine Names │
+     └──────┬──────┘
+            ▼
+     ┌─────────────┐
+     │ Sum ASCII Codes │
+     └──────┬──────┘
+            ▼
+     ┌─────────────┐
+     │ total % 101 │
+     └──────┬──────┘
+            ▼
+     ┌─────────────┐
+     │ Display Result │
+     └──────┬──────┘
+            ▼
+     ┌─────────────┐
+     │ Play Audio   │
+     └──────┬──────┘
+            ▼
+       ┌──────────┐
+       │   End    │
+       └──────────┘
